@@ -510,6 +510,20 @@ const MappaExample = () => {
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+            <Chip
+              key="tutti"
+              label="Tutti"
+              icon={<InfoIcon fontSize="small" />}
+              onClick={() => setFiltroCategoria(null)}
+              color={filtroCategoria === null ? 'primary' : 'default'}
+              variant={filtroCategoria === null ? 'filled' : 'outlined'}
+              sx={{ 
+                borderRadius: '20px',
+                '& .MuiChip-icon': {
+                  color: filtroCategoria === null ? 'inherit' : '#555555'
+                }
+              }}
+            />
             {categorie.map((categoria) => (
               <Chip
                 key={categoria.nome}
