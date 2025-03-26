@@ -639,16 +639,6 @@ const MappaExample = () => {
                       primary={
                         <Box display="flex" alignItems="center" gap={1}>
                           <Typography variant="subtitle1" fontWeight="bold">{attivita.nome}</Typography>
-                          <Chip 
-                            label={attivita.categoria || 'Altro'} 
-                            size="small"
-                            sx={{ 
-                              fontSize: '0.7rem',
-                              backgroundColor: getCategoryColor(attivita.categoria),
-                              color: '#ffffff',
-                              fontWeight: 'bold'
-                            }}
-                          />
                         </Box>
                       }
                       secondary={
@@ -712,42 +702,11 @@ const MappaExample = () => {
                     alt={attivita.nome}
                     sx={{ position: 'relative' }}
                   />
-                  <Box 
-                    sx={{ 
-                      position: 'absolute', 
-                      bottom: -20, 
-                      left: 20,
-                      width: 40,
-                      height: 40,
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      backgroundColor: attivita.colorePin || '#cccccc',
-                      color: '#ffffff',
-                      fontSize: '1.2rem',
-                      boxShadow: 2,
-                      border: '2px solid white'
-                    }}
-                  >
-                    {attivita.icona || '📍'}
-                  </Box>
-                  <CardContent sx={{ flexGrow: 1, pt: 3 }}>
+                  <CardContent sx={{ flexGrow: 1 }}>
                     <Box display="flex" alignItems="center" gap={1} mb={1}>
                       <Typography variant="h6" component="h3" sx={{ fontWeight: 'bold' }}>
                         {attivita.nome}
                       </Typography>
-                      <Chip
-                        label={attivita.categoria || 'Altro'}
-                        size="small"
-                        sx={{
-                          fontSize: '0.7rem',
-                          backgroundColor: getCategoryColor(attivita.categoria),
-                          color: '#ffffff',
-                          fontWeight: 'bold',
-                          ml: 'auto'
-                        }}
-                      />
                     </Box>
                     <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       {attivita.descrizione}
